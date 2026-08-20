@@ -1,6 +1,11 @@
 /* SHE MADE - Design System & Custom Styles */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap');
 
+html {
+  scrollbar-gutter: stable;
+  overflow-y: scroll;
+}
+
 :root {
   --bg-primary: #FAF7F5;
   --bg-card: #FDF8F7;
@@ -57,7 +62,7 @@ h1, h2, h3, h4, h5, .font-serif, .brand-logo {
   position: sticky;
   top: 0;
   z-index: 1050;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-link-item {
@@ -130,18 +135,33 @@ h1, h2, h3, h4, h5, .font-serif, .brand-logo {
 }
 
 /* Language Switcher */
-.lang-btn {
+.lang-btn, .lang-switch-btn {
   background: none;
-  border: none;
+  border: 1px solid rgba(190, 107, 121, 0.25);
+  border-radius: var(--radius-pill);
   color: var(--text-dark);
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  padding: 0.4rem;
-  transition: color 0.2s ease;
+  padding: 0.35rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
 }
 
-.lang-btn:hover {
+.lang-btn:hover, .lang-switch-btn:hover {
   color: var(--accent-mauve);
+  border-color: var(--accent-mauve);
+  background-color: rgba(190, 107, 121, 0.08);
+}
+
+.search-icon-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 /* Buttons */
@@ -534,6 +554,14 @@ h1, h2, h3, h4, h5, .font-serif, .brand-logo {
   font-weight: 600;
   font-size: 1rem;
   outline: none;
+}
+
+.cart-sticky-summary {
+  top: 90px;
+}
+
+.cart-item-img {
+  aspect-ratio: 1 / 1;
 }
 
 /* Custom Toast Notification System */
