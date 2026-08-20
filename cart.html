@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart | SHE MADE</title>
+
+  <!-- Instant Direction & Language Init (External) -->
+  <script src="js/init.js"></script>
+
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header Mount -->
+  <div id="site-header"></div>
+
+  <!-- Main Cart Container -->
+  <main class="container my-5 flex-grow-1">
+
+    <!-- Empty State -->
+    <div id="empty-cart-container" class="text-center py-5 d-none">
+      <div class="empty-cart-icon mb-4">
+        <i class="fa-solid fa-bag-shopping text-mauve fs-1"></i>
+      </div>
+      <h2 class="font-serif fw-bold mb-3" data-i18n="cart_empty_title">Your cart is currently empty</h2>
+      <p class="text-muted mx-auto mb-4" data-i18n="cart_empty_sub">
+        It looks like you haven't added any of our handcrafted pieces to your cart yet. Discover our intentional designs and find something beautiful.
+      </p>
+      <a href="index.html" class="btn btn-mauve px-4 py-2" data-i18n="start_shopping">START SHOPPING</a>
+    </div>
+
+    <!-- Populated State -->
+    <div id="populated-cart-container" class="row g-5 d-none">
+
+      <!-- Section 1: Cart Items List -->
+      <div class="col-12 col-lg-7" id="cart-items-list">
+        <!-- Dynamic Cart Items injected here via App.updateCartDisplay() -->
+      </div>
+
+      <!-- Section 2: Order Summary Form -->
+      <div class="col-12 col-lg-5">
+        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white sticky-top cart-sticky-summary">
+          <h3 class="font-serif fw-bold mb-4" data-i18n="order_summary">Order Summary</h3>
+          
+          <form id="checkout-form" onsubmit="return false;">
+            
+            <!-- Customer Phone Number -->
+            <div class="mb-3">
+              <label class="form-label-custom" for="customer-phone" data-i18n="phone_number_label">
+                Phone Number / رقم الهاتف <span class="text-danger">*</span>
+              </label>
+              <input type="tel" id="customer-phone" class="input-custom" placeholder="010XXXXXXXX" dir="ltr" maxlength="11" autocomplete="tel" required>
+              <div id="phone-error" class="text-danger small mt-1 d-none" data-i18n="phone_error_msg">يرجى إدخال رقم هاتف مصري صحيح (11 رقماً يبدأ بـ 010 أو 011 أو 012 أو 015)</div>
+            </div>
+
+            <!-- Alexandria Delivery Area Dropdown -->
+            <div class="mb-3">
+              <label class="form-label-custom" for="delivery-area-select" data-i18n="delivery_area_label">
+                Delivery Area / منطقة التوصيل بالإسكندرية <span class="text-danger">*</span>
+              </label>
+              <select id="delivery-area-select" class="input-custom" required>
+                <option value="" disabled selected data-i18n="choose_delivery_area">-- Choose Delivery Area / اختر المنطقة --</option>
+                <option value="pickup_raml" data-fee="0" data-en="Mahatet El Raml" data-ar="محطة الرمل">محطة الرمل - Mahatet El Raml</option>
+                <option value="pickup_sidi_gaber" data-fee="0" data-en="Sidi Gaber" data-ar="سيدي جابر">سيدي جابر - Sidi Gaber</option>
+                <option value="pickup_smouha" data-fee="0" data-en="Smouha" data-ar="سموحة">سموحة - Smouha</option>
+                <option value="pickup_san_stefano" data-fee="0" data-en="San Stefano" data-ar="سان ستيفانو">سان ستيفانو - San Stefano</option>
+                <option value="pickup_victoria_miami" data-fee="0" data-en="Victoria / Miami" data-ar="فيكتوريا / ميامي">فيكتوريا / ميامي - Victoria / Miami</option>
+                <option value="other" data-fee="0" data-en="Other" data-ar="أخرى (Other)">Other / أخرى</option>
+              </select>
+            </div>
+
+            <!-- Custom Address & GPS Fields (Shown when 'Other' selected) -->
+            <div id="custom-address-container" class="mb-3 p-3 rounded-3 bg-light d-none">
+              <label class="form-label-custom small mb-1" for="custom-address-text" data-i18n="detailed_address_label">
+                Detailed Address or Area Name / اكتب اسم المنطقة والعنوان <span class="text-danger">*</span>
+              </label>
+              <input type="text" id="custom-address-text" class="input-custom mb-2 bg-white" placeholder="مثال: سموحة شارع فوزي معاذ أو العجمي الهانوفيل..." data-i18n-placeholder="custom_address_placeholder">
+              
+              <button type="button" id="btn-detect-gps" class="btn btn-outline-secondary btn-sm w-100 rounded-pill mb-2">
+                <i class="fa-solid fa-location-crosshairs me-1"></i><span data-i18n="detect_gps_btn">استخدم موقعي الحالي (GPS)</span>
+              </button>
+              <div id="gps-status" class="small text-muted"></div>
+            </div>
+
+            <!-- Delivery Date Selector -->
+            <div class="mb-4">
+              <label class="form-label-custom" for="delivery-date-select" data-i18n="delivery_date_label">
+                Available Delivery Date / موعد التسليم المتاح <span class="text-danger">*</span>
+              </label>
+              <select id="delivery-date-select" class="input-custom" required>
+                <option value="" disabled selected data-i18n="loading_dates">-- Loading Available Dates / جاري تحميل المواعيد... --</option>
+              </select>
+            </div>
+
+            <hr class="my-3">
+
+            <!-- Price & Deposit Breakdown -->
+            <div class="d-flex justify-content-between mb-2 small">
+              <span class="text-muted" data-i18n="subtotal_label">Subtotal / إجمالي المنتجات</span>
+              <span id="cart-subtotal-val" class="fw-semibold text-dark">0 EGP</span>
+            </div>
+
+            <div class="d-flex justify-content-between mb-2 small">
+              <span class="text-muted" data-i18n="delivery_fee_label">Delivery Fee / تكلفة التوصيل</span>
+              <span id="cart-delivery-val" class="fw-semibold text-dark">0 EGP</span>
+            </div>
+
+            <div class="d-flex justify-content-between mb-3 fs-5">
+              <span class="fw-bold font-serif" data-i18n="total_amount_label">Total / الإجمالي الكلي</span>
+              <span id="cart-grand-total" class="fw-bold text-mauve">0 EGP</span>
+            </div>
+
+            <div class="p-3 rounded-3 bg-mauve-light mb-3">
+              <div class="d-flex justify-content-between mb-1 small">
+                <span class="text-dark fw-bold" data-i18n="deposit_label">العربون قبل البدء (50%):</span>
+                <span id="cart-deposit-val" class="fw-bold text-mauve">0 EGP</span>
+              </div>
+              <div class="d-flex justify-content-between small">
+                <span class="text-muted" data-i18n="remaining_label">المتبقي عند الاستلام:</span>
+                <span id="cart-remaining-val" class="fw-bold text-dark">0 EGP</span>
+              </div>
+            </div>
+
+            <!-- Terms & Conditions Checkbox -->
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" id="terms-checkbox" required>
+              <label class="form-check-label small" for="terms-checkbox">
+                <span data-i18n="agree_terms_prefix">أوافق على</span>
+                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#termsModal" class="text-mauve fw-bold text-decoration-underline" data-i18n="terms_link_txt">الشروط والأحكام</a>
+                <span data-i18n="agree_terms_suffix">(دفع عربون 50% غير مسترد بعد 24 ساعة من الدفع)</span>
+              </label>
+            </div>
+
+            <!-- WhatsApp Order Button -->
+            <button type="button" id="whatsapp-order-btn" class="btn btn-mauve w-100 py-3 shadow-sm" disabled>
+              <i class="fa-brands fa-whatsapp me-2 fs-5"></i><span data-i18n="order_whatsapp">Order via WhatsApp</span>
+            </button>
+            
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Site Footer Mount -->
+  <div id="site-footer"></div>
+
+  <!-- Core Scripts (All External) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/products-data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>
