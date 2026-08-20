@@ -1,0 +1,318 @@
+// She Made - Products Data Service & Helper Functions
+window.SHEMADE_PRODUCTS = [
+  {
+    id: 1,
+    nameEn: "Crochet Flower Bracelet",
+    nameAr: "إسوارة زهور الكروشيه",
+    parentCategory: "Crochet",
+    parentCategoryAr: "كروشيه",
+    subCategory: "Bracelets",
+    subCategoryAr: "أساور",
+    price: 140,
+    descriptionEn: "Handcrafted crochet bracelet featuring a continuous band of woven floral motifs with an adjustable cord closure.",
+    descriptionAr: "إسوارة يدوية رقيقة مصممة من سلسلة زهور كروشيه متصلة مع خيط سحب قابل للتعديل ليناسب مختلف المقاسات.",
+    mainImage: "https://i.pinimg.com/736x/28/aa/9a/28aa9abac6ffbeb8592abb86f4816be6.jpg",
+    images: [
+      "https://i.pinimg.com/736x/28/aa/9a/28aa9abac6ffbeb8592abb86f4816be6.jpg",
+      "https://i.pinimg.com/1200x/4d/1a/cd/4d1acd5b5490a82fcbef03a7beeecd09.jpg",
+      "https://i.pinimg.com/736x/a2/c6/52/a2c652d8143079c237029cb21cc67f5f.jpg"
+    ],
+    isBestSeller: true,
+    isNewArrival: true,
+    keywords: "crochet flower bracelet اسورة كروشيه زهور ورد هاندميد اكسسوارات"
+  },
+  {
+    id: 2,
+    nameEn: "Crochet Flower & Pearl Bracelet",
+    nameAr: "إسوارة زهور الكروشيه واللؤلؤ",
+    parentCategory: "Crochet",
+    parentCategoryAr: "كروشيه",
+    subCategory: "Bracelets",
+    subCategoryAr: "أساور",
+    price: 180,
+    descriptionEn: "Elegant chain bracelet combining handcrafted crochet flowers with dangling lustrous pearls and a secure clasp.",
+    descriptionAr: "إسوارة سلسلة تجمع بين رقة زهور الكروشيه المشغولة يدوياً ودلايات حبات اللؤلؤ المتدلية لإطلالة كلاسيكية أنيقة.",
+    mainImage: "https://i.pinimg.com/1200x/1c/46/08/1c4608a26446d4e8e6702ae01be56d3f.jpg",
+    images: [
+      "https://i.pinimg.com/1200x/1c/46/08/1c4608a26446d4e8e6702ae01be56d3f.jpg",
+      "https://i.pinimg.com/1200x/84/03/b2/8403b283643d9bad608aafc423870a23.jpg",
+      "https://i.pinimg.com/736x/fc/fe/fa/fcfefae1f0568aa240d1ec1ee13d3ad5.jpg"
+    ],
+    isBestSeller: true,
+    isNewArrival: true,
+    keywords: "crochet pearl flower bracelet اسورة لؤلؤ زهور كروشيه سلاسل هاندميد"
+  },
+  {
+    id: 3,
+    nameEn: "Crochet Daisy Charm Bracelet",
+    nameAr: "إسوارة دلايات زهور الديزي",
+    parentCategory: "Crochet",
+    parentCategoryAr: "كروشيه",
+    subCategory: "Bracelets",
+    subCategoryAr: "أساور",
+    price: 160,
+    descriptionEn: "Dainty chain bracelet featuring playful handcrafted 3D crochet puff daisy charms with metallic bead accents.",
+    descriptionAr: "سلسلة يد رقيقة تتدلى منها أزهار ديزي كروشيه مجسمة ثلاثية الأبعاد مع حبات معدنية متناسقة وقفل كلاسيكي.",
+    mainImage: "https://i.pinimg.com/1200x/f1/5a/6b/f15a6b00bf586ae2f88bc27e30ae5202.jpg",
+    images: [
+      "https://i.pinimg.com/1200x/f1/5a/6b/f15a6b00bf586ae2f88bc27e30ae5202.jpg",
+      "https://i.pinimg.com/1200x/b5/82/cb/b582cba47242c5990a7cc89808ab868c.jpg",
+      "https://i.pinimg.com/1200x/c2/7a/4d/c27a4d745c812c43278c22783b08312a.jpg"
+    ],
+    isBestSeller: false,
+    isNewArrival: true,
+    keywords: "crochet daisy charm bracelet اسورة ديزي كروشيه دلايات سلاسل هاندميد"
+  },
+  {
+    id: 4,
+    nameEn: "Crochet Coin Anklet",
+    nameAr: "خلخال الكروشيه بالعملات المعدنية",
+    parentCategory: "Crochet",
+    parentCategoryAr: "كروشيه",
+    subCategory: "Anklets",
+    subCategoryAr: "خلاخيل",
+    price: 190,
+    descriptionEn: "Bohemian-style openwork crochet anklet featuring lace geometric stitching and dangling embossed coin charms.",
+    descriptionAr: "خلخال بوهيمي مشغول يدوياً بغرز كروشيه مفرغة بنمط الدانتيل الهندسي، مزين بعملات معدنية منقوشة متدلية تضفي طابعاً تراثياً جذاباً.",
+    mainImage: "https://i.pinimg.com/1200x/45/58/54/45585405b0c1e2411c5bf54ab10c8037.jpg",
+    images: [
+      "https://i.pinimg.com/1200x/45/58/54/45585405b0c1e2411c5bf54ab10c8037.jpg",
+      "https://i.pinimg.com/1200x/8b/cb/89/8bcb8930d219afb04550354621eab2ab.jpg",
+      "https://i.pinimg.com/1200x/56/5e/70/565e70b277fa727292db6056b176d7b6.jpg",
+      "https://i.pinimg.com/1200x/ad/01/0a/ad010adca03dcf8996f11f23f14e2c29.jpg"
+    ],
+    isBestSeller: true,
+    isNewArrival: true,
+    keywords: "crochet coin anklet خلخال كروشيه عملات معدنية بوهيمي خلاخيل هاندميد"
+  },
+  {
+    id: 5,
+    nameEn: "Crochet Leaf Earrings",
+    nameAr: "أقراط أوراق الشجر الكروشيه",
+    parentCategory: "Crochet",
+    parentCategoryAr: "كروشيه",
+    subCategory: "Earrings",
+    subCategoryAr: "أقراط",
+    price: 150,
+    descriptionEn: "Nature-inspired dangle earrings featuring layered handcrafted crochet botanical leaves suspended from delicate chain links.",
+    descriptionAr: "حلق متدلي مستوحى من الطبيعة مصمم من أوراق شجر كروشيه منسوجة يدوياً بتدرج انسيابي على سلاسل معدنية وخطاف مريح.",
+    mainImage: "https://i.pinimg.com/1200x/5d/22/14/5d22143e23c24ef14921ad2afbe23a13.jpg",
+    images: [
+      "https://i.pinimg.com/1200x/5d/22/14/5d22143e23c24ef14921ad2afbe23a13.jpg",
+      "https://i.pinimg.com/736x/c5/90/93/c59093f0a878091f198b17a7e713abc1.jpg",
+      "https://i.pinimg.com/1200x/53/f1/61/53f161ff1ff545c1ff53258b7edcf604.jpg",
+      "https://i.pinimg.com/1200x/d9/7b/15/d97b158e4a5c3275be62d72af819702d.jpg"
+    ],
+    isBestSeller: false,
+    isNewArrival: true,
+    keywords: "crochet leaf earrings اقراط حلق كروشيه ورق شجر متدلي هاندميد"
+  },
+  {
+    id: 6,
+    nameEn: "Crochet Star Triangle Belt",
+    nameAr: "حزام نجوم الكروشيه المثلث",
+    parentCategory: "Crochet",
+    parentCategoryAr: "كروشيه",
+    subCategory: "Belts",
+    subCategoryAr: "أحزمة",
+    price: 260,
+    descriptionEn: "Handcrafted crochet waist belt featuring an interconnected cascading triangle arrangement of woven star motifs.",
+    descriptionAr: "حزام خصر كروشيه بتصميم مثلث مبتكر مكوّن من وحدات نجوم متصلة ومتدرجة لإطلالة عصرية أنيقة.",
+    mainImage: "https://i.pinimg.com/736x/fe/49/1e/fe491ef0e1afda5f7280a5dc2566e011.jpg",
+    images: [
+      "https://i.pinimg.com/736x/fe/49/1e/fe491ef0e1afda5f7280a5dc2566e011.jpg",
+      "https://i.pinimg.com/736x/d8/ff/d3/d8ffd303ef4a548711669ed9c70139ea.jpg"
+    ],
+    isBestSeller: true,
+    isNewArrival: true,
+    keywords: "crochet belt star triangle حزام كروشيه نجوم مثلث خصر هاندميد اكسسوارات"
+  },
+  {
+    id: 7,
+    nameEn: "Spider-Man Crochet Keychain",
+    nameAr: "ميدالية سبايدرمان الكروشيه",
+    parentCategory: "Crochet",
+    parentCategoryAr: "كروشيه",
+    subCategory: "Keychains",
+    subCategoryAr: "ميداليات",
+    price: 95,
+    descriptionEn: "Handcrafted circular crochet keychain featuring an embroidered Spider-Man mask motif with a durable metal key ring.",
+    descriptionAr: "ميدالية مفاتيح دائرية منسوجة يدوياً بالكروشيه بتطريز قناع سبايدرمان المجسم مع حلقة معدنية متينة.",
+    mainImage: "https://i.pinimg.com/736x/fb/c8/0b/fbc80b6628010d68261a928ebeb5ef28.jpg",
+    images: [
+      "https://i.pinimg.com/736x/fb/c8/0b/fbc80b6628010d68261a928ebeb5ef28.jpg",
+      "https://i.pinimg.com/736x/1d/ec/60/1dec600605ec4b560c4e9c7dd5bff7cc.jpg"
+    ],
+    isBestSeller: false,
+    isNewArrival: true,
+    keywords: "spiderman keychain crochet ميدالية سبايدرمان كروشيه مفاتيح هاندميد شخصيات"
+  },
+  {
+    id: 8,
+    nameEn: "Crochet Bear Baby Booties",
+    nameAr: "حذاء بيبي كروشيه بالدبدوب",
+    parentCategory: "Crochet",
+    parentCategoryAr: "كروشيه",
+    subCategory: "Baby",
+    subCategoryAr: "أطفال وبيبي",
+    price: 180,
+    descriptionEn: "Soft handcrafted crochet baby booties featuring an adjustable strap button closure and a cute teddy bear face applique on the toe.",
+    descriptionAr: "حذاء أطفال ناعم مشغول يدوياً بالكروشيه بحزام إغلاق علوي وزينة وجه دبدوب مجسمة في المقدمة لراحة وأناقة الطفل.",
+    mainImage: "https://i.pinimg.com/736x/bb/fb/13/bbfb1394cc39a768b43e03e03d4de2d8.jpg",
+    images: [
+      "https://i.pinimg.com/736x/bb/fb/13/bbfb1394cc39a768b43e03e03d4de2d8.jpg",
+      "https://i.pinimg.com/736x/6c/4a/e5/6c4ae50154e64fc71c3eb90e439ba98a.jpg",
+      "https://i.pinimg.com/736x/72/1b/74/721b74ec06162f2d3cd132c83e6f79c6.jpg"
+    ],
+    isBestSeller: true,
+    isNewArrival: true,
+    keywords: "crochet baby shoes booties bear حذاء بيبي كروشيه جزمة اطفال دبدوب هاندميد"
+  },
+  {
+    id: 9,
+    nameEn: "Crochet Floral Hair Bandana",
+    nameAr: "بندانة ورود الكروشيه",
+    parentCategory: "Crochet",
+    parentCategoryAr: "كروشيه",
+    subCategory: "Headbands",
+    subCategoryAr: "بندانات شعر",
+    price: 170,
+    descriptionEn: "Handcrafted triangular crochet hair bandana featuring openwork floral lace stitching and hanging flower tie cords.",
+    descriptionAr: "بندانة شعر مثلثة منسوجة يدوياً بغرز كروشيه شبكية مفرغة بنقشة الزهور مع أربطة ورود متدلية لسهولة التثبيت.",
+    mainImage: "https://i.pinimg.com/736x/7c/40/a8/7c40a8cbe0d8ea00c7a94c85079ed470.jpg",
+    images: [
+      "https://i.pinimg.com/736x/7c/40/a8/7c40a8cbe0d8ea00c7a94c85079ed470.jpg"
+    ],
+    isBestSeller: true,
+    isNewArrival: true,
+    keywords: "crochet bandana hair floral بندانة شعر كروشيه ورود طوق اسكارف هاندميد"
+  },
+  {
+    id: 10,
+    nameEn: "Crochet Beach Hat with Charms",
+    nameAr: "قبعة بحر كروشيه بدلايات",
+    parentCategory: "Crochet",
+    parentCategoryAr: "كروشيه",
+    subCategory: "Hats",
+    subCategoryAr: "قبعات",
+    price: 230,
+    descriptionEn: "Lightweight handcrafted crochet summer beach hat featuring airy mesh stitching and dangling metallic charms along the brim.",
+    descriptionAr: "قبعة بحر كروشيه صيفية خفيفة بغرز شبكية مفرغة تتدلى من أطرافها دلايات معدنية من النجوم والكفوف لإطلالة شاطئية بوهيمية مميزة.",
+    mainImage: "https://i.pinimg.com/736x/94/2b/76/942b76683e4f89049ddd6b05e401d4c1.jpg",
+    images: [
+      "https://i.pinimg.com/736x/94/2b/76/942b76683e4f89049ddd6b05e401d4c1.jpg",
+      "https://i.pinimg.com/736x/c0/b4/57/c0b4579808f156642e87750a6b16ffac.jpg",
+      "https://i.pinimg.com/1200x/35/49/e1/3549e1be771bc68d6bbccdb106ffb6c2.jpg",
+      "https://i.pinimg.com/736x/86/fb/59/86fb59b76f2e784009bdd9902fdbd876.jpg"
+    ],
+    isBestSeller: true,
+    isNewArrival: true,
+    keywords: "crochet beach hat charms قبعة بحر كروشيه طاقية صيف دلايات نجوم كفوف بوهيمي"
+  }
+];
+
+window.ProductDataService = {
+  getProducts() {
+    return window.SHEMADE_PRODUCTS || [];
+  },
+
+  getProductById(id) {
+    const products = this.getProducts();
+    return products.find(p => p.id === parseInt(id)) || null;
+  },
+
+  getBestSellers() {
+    const products = this.getProducts();
+    return products.filter(p => p.isBestSeller);
+  },
+
+  getNewArrivals() {
+    const products = this.getProducts();
+    return products.filter(p => p.isNewArrival);
+  },
+
+  getCrochetGrouped() {
+    const products = this.getProducts();
+    const crochetList = products.filter(p => p.parentCategory.toLowerCase() === 'crochet');
+    const grouped = {};
+    crochetList.forEach(p => {
+      if (!grouped[p.subCategory]) {
+        grouped[p.subCategory] = [];
+      }
+      grouped[p.subCategory].push(p);
+    });
+    return grouped;
+  },
+
+  getBeadsGrouped() {
+    const products = this.getProducts();
+    const beadsList = products.filter(p => p.parentCategory.toLowerCase() === 'beads');
+    const grouped = {};
+    beadsList.forEach(p => {
+      if (!grouped[p.subCategory]) {
+        grouped[p.subCategory] = [];
+      }
+      grouped[p.subCategory].push(p);
+    });
+    return grouped;
+  },
+
+  getRelatedProducts(currentId, parentCategory) {
+    const products = this.getProducts();
+    return products
+      .filter(p => p.id !== parseInt(currentId) && p.parentCategory.toLowerCase() === (parentCategory || '').toLowerCase())
+      .slice(0, 4);
+  },
+
+  searchProducts(query) {
+    if (!query || !query.trim()) return [];
+    const q = query.trim().toLowerCase();
+    const products = this.getProducts();
+    return products.filter(p => {
+      return (
+        (p.nameEn && p.nameEn.toLowerCase().includes(q)) ||
+        (p.nameAr && p.nameAr.toLowerCase().includes(q)) ||
+        (p.descriptionEn && p.descriptionEn.toLowerCase().includes(q)) ||
+        (p.descriptionAr && p.descriptionAr.toLowerCase().includes(q)) ||
+        (p.subCategory && p.subCategory.toLowerCase().includes(q)) ||
+        (p.subCategoryAr && p.subCategoryAr.toLowerCase().includes(q)) ||
+        (p.parentCategory && p.parentCategory.toLowerCase().includes(q)) ||
+        (p.parentCategoryAr && p.parentCategoryAr.toLowerCase().includes(q)) ||
+        (p.keywords && p.keywords.toLowerCase().includes(q))
+      );
+    });
+  },
+
+  renderProductCardHtml(product) {
+    const nameEn = product.nameEn;
+    const nameAr = product.nameAr || product.nameEn;
+    const descEn = product.descriptionEn ? (product.descriptionEn.length > 45 ? product.descriptionEn.substring(0, 45) + '...' : product.descriptionEn) : product.subCategory;
+    const descAr = product.descriptionAr ? (product.descriptionAr.length > 45 ? product.descriptionAr.substring(0, 45) + '...' : product.descriptionAr) : (product.subCategoryAr || product.subCategory);
+    const img = product.mainImage || (product.images && product.images[0]) || 'images/index.jpg';
+    const price = Math.round(product.price);
+
+    const isAr = (window.CurrentLang || 'ar') === 'ar';
+    const detailsTxt = isAr ? 'التفاصيل' : 'Details';
+    const currency = isAr ? 'ج.م' : 'EGP';
+    const currentName = isAr ? nameAr : nameEn;
+    const currentDesc = isAr ? descAr : descEn;
+
+    return `
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="product-card">
+          <div class="product-card-img-wrap">
+            <img src="${img}" alt="${nameEn}" class="product-card-img" loading="lazy">
+          </div>
+          <div class="d-flex align-items-baseline justify-content-between mb-1">
+            <h5 class="product-card-title" data-en="${nameEn}" data-ar="${nameAr}">${currentName}</h5>
+            <span class="product-card-price" data-price="${price}">${price} ${currency}</span>
+          </div>
+          <p class="product-card-sub" data-en="${descEn}" data-ar="${descAr}">${currentDesc}</p>
+          <div class="mt-auto">
+            <a href="details.html?id=${product.id}" class="btn btn-mauve btn-mauve-sm w-100" data-i18n="details">${detailsTxt}</a>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+};
